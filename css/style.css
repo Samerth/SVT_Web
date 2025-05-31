@@ -259,7 +259,13 @@ button {
     color: #fff;
 }
 
-.logo {}
+.logo img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 60px; /* Adjust as needed for your navbar */
+    display: block;
+}
 
 /* header section end */
 
@@ -478,6 +484,18 @@ img.image {
 
 .container_main {
     position: relative;
+    overflow: hidden;
+}
+
+.container_main .image {
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.container_main:hover .image,
+.container_main:active .image,
+.container_main:focus .image {
+    transform: scale(1.12);
+    z-index: 2;
 }
 
 .overlay {
